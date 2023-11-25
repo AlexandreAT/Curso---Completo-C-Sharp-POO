@@ -13,3 +13,18 @@ C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programaçã
 C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex7\obj\Debug\net6.0\Ex7.pdb
 C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex7\obj\Debug\net6.0\Ex7.genruntimeconfig.cache
 C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex7\obj\Debug\net6.0\ref\Ex7.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\bin\Debug\net6.0\Ex7.exe
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\bin\Debug\net6.0\Ex7.deps.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\bin\Debug\net6.0\Ex7.runtimeconfig.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\bin\Debug\net6.0\Ex7.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\bin\Debug\net6.0\Ex7.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\refint\Ex7.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\Ex7.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex7\obj\Debug\net6.0\ref\Ex7.dll
