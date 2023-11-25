@@ -1,0 +1,15 @@
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\bin\Debug\net6.0\Ex6.exe
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\bin\Debug\net6.0\Ex6.deps.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\bin\Debug\net6.0\Ex6.runtimeconfig.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\bin\Debug\net6.0\Ex6.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\bin\Debug\net6.0\Ex6.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\refint\Ex6.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\Ex6.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex6\obj\Debug\net6.0\ref\Ex6.dll

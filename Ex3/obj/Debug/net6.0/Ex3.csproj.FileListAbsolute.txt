@@ -1,0 +1,15 @@
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\bin\Debug\net6.0\Ex3.exe
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\bin\Debug\net6.0\Ex3.deps.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\bin\Debug\net6.0\Ex3.runtimeconfig.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\bin\Debug\net6.0\Ex3.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\bin\Debug\net6.0\Ex3.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\refint\Ex3.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\Ex3.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\Ex3\obj\Debug\net6.0\ref\Ex3.dll

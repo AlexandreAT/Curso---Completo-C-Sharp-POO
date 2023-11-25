@@ -1,0 +1,15 @@
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\bin\Debug\net6.0\RevisaoIntermediaria.exe
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\bin\Debug\net6.0\RevisaoIntermediaria.deps.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\bin\Debug\net6.0\RevisaoIntermediaria.runtimeconfig.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\bin\Debug\net6.0\RevisaoIntermediaria.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\bin\Debug\net6.0\RevisaoIntermediaria.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\refint\RevisaoIntermediaria.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\RevisaoIntermediaria.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo Programação Orientada a Objetos\RevisaoIntermediaria\obj\Debug\net6.0\ref\RevisaoIntermediaria.dll
