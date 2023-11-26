@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex3\\Ex3.csproj": {}
+    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex8\\Ex8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex3\\Ex3.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex8\\Ex8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex3\\Ex3.csproj",
-        "projectName": "Ex3",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex3\\Ex3.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex8\\Ex8.csproj",
+        "projectName": "Ex8",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex8\\Ex8.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex3\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex8\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
