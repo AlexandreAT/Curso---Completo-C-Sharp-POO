@@ -23,7 +23,9 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("2 - Herença");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("3 - Sair");
+                Console.WriteLine("3 - Classes/Métodos Abstratos");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("4 - Sair");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("");
                 Console.Write("Digite a opção escolhida: ");
@@ -36,12 +38,16 @@ namespace RevisaoIntermediaria {
                     case 2:
                         Herenca();
                     break;
+                    case 3:
+                        Abstratos();
+                    break;
                 }
 
-            } while (resp != 3);
+            } while (resp != 4);
         }
 
         static void Enumeração(){
+
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("Enumeração");
@@ -204,6 +210,63 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine();
                 Console.WriteLine("Opção inválida!");
             }
+
+            Console.WriteLine("");
+            Console.WriteLine("Clique enter para voltar ao menu");
+            Console.ReadLine();
+
+        }
+
+        static void Abstratos(){
+
+            int n;
+            char op;
+            double width, height, radius;
+            Color color;
+            List<Shapes> shapes = new List<Shapes>();
+
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("Classes/Métodos Abstratos");
+            Console.WriteLine("-------------------------------------------------------");
+
+            Console.Write("Digite quantos formas serão digitadas: ");
+            n = int.Parse(Console.ReadLine());
+
+            for(int i = 1; i <= n; i++){
+
+                Console.WriteLine("Forma "+i+": ");
+                Console.Write("É um retângulo ou círculo? (R/C)");
+                op = char.Parse(Console.ReadLine());
+                Console.Write("Digite a cor (Black/Blue/Red): ");
+                color = Enum.Parse<Color>(Console.ReadLine()); 
+
+                if(op == 'R' || op == 'r'){
+                    
+                    Console.Write("Digite a largura: ");
+                    width = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Console.Write("Digite a altura: ");
+                    height = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    shapes.Add(new Rectangle(color, width, height));
+
+                }
+
+                if(op == 'C' || op == 'c'){
+
+                    Console.Write("Digite o raio: ");
+                    radius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    shapes.Add(new Circle(color, radius));
+
+                }
+
+            }
+
+            foreach (Shapes shape in shapes)
+            {
+                Console.WriteLine("------------------------");
+                Console.WriteLine(shape);
+            }
+            Console.WriteLine("------------------------");
 
             Console.WriteLine("");
             Console.WriteLine("Clique enter para voltar ao menu");
