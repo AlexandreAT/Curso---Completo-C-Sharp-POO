@@ -2,6 +2,7 @@
 using System.Globalization;
 using RevisaoIntermediaria.Entities;
 using RevisaoIntermediaria.Entities.Enums;
+using RevisaoIntermediaria.Entities.Exceptions;
 
 namespace RevisaoIntermediaria {
     class Program{
@@ -25,7 +26,9 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("3 - Classes/Métodos Abstratos");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("4 - Sair");
+                Console.WriteLine("4 - Tratamento de exceções");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("5 - Sair");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("");
                 Console.Write("Digite a opção escolhida: ");
@@ -33,20 +36,23 @@ namespace RevisaoIntermediaria {
 
                 switch(resp){
                     case 1:
-                        Enumeração();
+                        Enumeracao();
                     break;
                     case 2:
                         Herenca();
                     break;
                     case 3:
-                        Abstratos();
+                        Abstracao();
+                    break;
+                    case 4:
+                        Excecao();
                     break;
                 }
 
-            } while (resp != 4);
+            } while (resp != 5);
         }
 
-        static void Enumeração(){
+        static void Enumeracao(){
 
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------------");
@@ -217,7 +223,7 @@ namespace RevisaoIntermediaria {
 
         }
 
-        static void Abstratos(){
+        static void Abstracao(){
 
             int n;
             char op;
@@ -271,6 +277,55 @@ namespace RevisaoIntermediaria {
             Console.WriteLine("");
             Console.WriteLine("Clique enter para voltar ao menu");
             Console.ReadLine();
+
+        }
+
+        static void Excecao(){
+
+            int roomNumber;
+            DateTime checkIn, checkOut, now = DateTime.Now;
+            Reservation reservation;
+
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("Exceção");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine();
+
+            try{
+                Console.WriteLine("----------Cadastrando os dados para a reserva do hotel----------");
+                Console.Write("Digite o número do quarto: ");
+                roomNumber = int.Parse(Console.ReadLine());
+                Console.Write("Digite a data de checkIn: ");
+                checkIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Digite a data de checkOut: ");
+                checkOut = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine("----------------------------------------------------------------");
+                Console.WriteLine();
+
+                reservation = new Reservation(roomNumber, checkIn, checkOut);
+                Console.WriteLine(reservation);
+                Console.WriteLine();
+                
+                Console.WriteLine("----------Atualizando a reserva---------------------------------");
+                Console.Write("Digite a data de checkIn: ");
+                checkIn = DateTime.Parse(Console.ReadLine());
+                Console.Write("Digite a data de checkOut: ");
+                checkOut = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine("----------------------------------------------------------------");
+                Console.WriteLine();
+
+                reservation.UpdateDates(checkIn, checkOut);
+                Console.WriteLine(reservation);
+                Console.WriteLine();
+                
+            }
+            catch(DomainException e){
+
+                Console.WriteLine("Erro: "+e.Message);
+                Console.WriteLine();
+
+            }
 
         }
 
