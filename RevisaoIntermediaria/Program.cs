@@ -318,13 +318,23 @@ namespace RevisaoIntermediaria {
                 reservation.UpdateDates(checkIn, checkOut);
                 Console.WriteLine(reservation);
                 Console.WriteLine();
-                
+
             }
             catch(DomainException e){
 
                 Console.WriteLine("Erro: "+e.Message);
                 Console.WriteLine();
 
+            }
+            catch(FormatException e){
+                Console.WriteLine();
+                Console.WriteLine("Format error: "+e.Message);
+                Console.WriteLine();
+            }
+            catch(Exception e){
+                Console.WriteLine();
+                Console.WriteLine("Erro inesperado: "+e.Message);
+                Console.WriteLine();
             }
 
         }

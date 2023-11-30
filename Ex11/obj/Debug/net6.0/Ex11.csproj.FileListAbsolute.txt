@@ -1,0 +1,15 @@
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\bin\Debug\net6.0\Ex11.exe
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\bin\Debug\net6.0\Ex11.deps.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\bin\Debug\net6.0\Ex11.runtimeconfig.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\bin\Debug\net6.0\Ex11.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\bin\Debug\net6.0\Ex11.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\refint\Ex11.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\Ex11.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\Ex11\obj\Debug\net6.0\ref\Ex11.dll
