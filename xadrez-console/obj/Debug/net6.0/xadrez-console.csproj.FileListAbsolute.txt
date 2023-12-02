@@ -1,0 +1,15 @@
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\bin\Debug\net6.0\xadrez-console.exe
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\bin\Debug\net6.0\xadrez-console.deps.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\bin\Debug\net6.0\xadrez-console.runtimeconfig.json
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\bin\Debug\net6.0\xadrez-console.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\bin\Debug\net6.0\xadrez-console.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\refint\xadrez-console.dll
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.pdb
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\xadrez-console.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\xadrez-console\obj\Debug\net6.0\ref\xadrez-console.dll
