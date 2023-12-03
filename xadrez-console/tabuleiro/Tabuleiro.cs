@@ -47,7 +47,7 @@ namespace xadrez_console.tabuleiro
 
         }
 
-        public Peca ratirarPeca(Posicao pos){
+        public Peca retirarPeca(Posicao pos){
             if(peca(pos) == null){
                 return null;
             }
