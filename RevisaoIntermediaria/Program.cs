@@ -11,13 +11,13 @@ namespace RevisaoIntermediaria {
 
             int resp;
 
-            Console.WriteLine("");
-            Console.WriteLine("=============================================");
-            Console.WriteLine("REVISÃO INTERMEDIÁRIA");
-            Console.WriteLine("=============================================");
-
             do
             {
+                Console.WriteLine("");
+                Console.WriteLine("=============================================");
+                Console.WriteLine("REVISÃO INTERMEDIÁRIA");
+                Console.WriteLine("=============================================");
+
                 Console.WriteLine("Opções: ");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("1 - Enumeração");
@@ -28,9 +28,11 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("4 - Tratamento de exceções");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("5 - Sair");
+                Console.WriteLine("5 - Trabalhando com arquivos");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("");
+                Console.WriteLine("6 - Sair");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine();
                 Console.Write("Digite a opção escolhida: ");
                 resp = int.Parse(Console.ReadLine());
 
@@ -47,13 +49,18 @@ namespace RevisaoIntermediaria {
                     case 4:
                         Excecao();
                     break;
+                    case 5:
+                        Arquivos();
+                    break;
                 }
 
-            } while (resp != 5);
+            } while (resp != 6);
+            Console.Clear();
         }
 
         static void Enumeracao(){
 
+            Console.Clear();
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("Enumeração");
@@ -84,6 +91,7 @@ namespace RevisaoIntermediaria {
             BusinessAccount businessAccount;
             SavingsAccount savingsAccount;
 
+            Console.Clear();
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("Herença");
@@ -231,6 +239,7 @@ namespace RevisaoIntermediaria {
             Color color;
             List<Shapes> shapes = new List<Shapes>();
 
+            Console.Clear();
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("Classes/Métodos Abstratos");
@@ -286,6 +295,7 @@ namespace RevisaoIntermediaria {
             DateTime checkIn, checkOut, now = DateTime.Now;
             Reservation reservation;
 
+            Console.Clear();
             Console.WriteLine("");
             Console.WriteLine("-------------------------------------------------------");
             Console.WriteLine("Exceção");
@@ -337,6 +347,176 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine();
             }
 
+        }
+
+        static void Arquivos(){
+
+            string arqName;
+            int op = 0;
+
+            do
+            {
+                string path = @"C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\RevisaoIntermediaria\";
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("Trabalhando com arquivos");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine();
+
+                Console.WriteLine("------------------------OPÇÕES------------------------");
+                Console.WriteLine("1 - Ler arquivo");
+                Console.WriteLine("2 - Acrescentar no arquivo");
+                Console.WriteLine("3 - Clonar arquivo");
+                Console.WriteLine("4 - Criar novo arquivo");
+                Console.WriteLine("5 - Deletar arquivo");
+                Console.WriteLine("6 - Criar uma pasta");
+                Console.WriteLine("7 - Listar todas as pastas dentro de outra pasta");
+                Console.WriteLine("8 - Listar todos os arquivos dentro de uma pasta");
+                Console.WriteLine("9 - Sair");
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine();
+                Console.Write("Digite a opção escolhida: ");
+                op = int.Parse(Console.ReadLine());
+
+                switch(op){
+
+                    case 1:
+                        Console.Clear();
+                        Console.Write("Digite o nome do arquivo que deseja ler com o seu tipo (ex: 'Arquivo 1.txt'): ");
+                        arqName = Console.ReadLine();
+                        path += arqName;
+                        Console.WriteLine();
+                        
+                        try{
+                            Console.WriteLine("Conteúdo do arquivo: ");
+                            using(StreamReader sr = File.OpenText(path)){
+                                    while(!sr.EndOfStream){
+                                    string line = sr.ReadLine();
+                                    Console.WriteLine(line);
+                                }
+                            }
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Um erro ocorreu!");
+                            Console.WriteLine(e.Message);
+                        }
+                        Console.WriteLine();
+                        path = "";
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+                    break;
+
+                    case 2:
+                        Console.Clear();
+                        Console.Write("Digite o nome do arquivo que deseja editar com o seu tipo (ex: 'Arquivo 1.txt'): ");
+                        arqName = Console.ReadLine();
+                        path += arqName;
+                        Console.WriteLine();
+
+                        try{
+                            using(StreamWriter sw = File.AppendText(path)){
+                                string text = " ";
+                                Console.Write("Digite o texto que deseja acrescentar ao final do arquivo: ");
+                                text += Console.ReadLine();
+                                sw.WriteLine(text);
+                            }
+
+                            Console.WriteLine("Conteúdo novo do arquivo: ");
+                            using(StreamReader sr = File.OpenText(path)){
+                                while(!sr.EndOfStream){
+                                    string line = sr.ReadLine();
+                                    Console.WriteLine(line);
+                                }
+                            }
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Um erro ocorreu!");
+                            Console.WriteLine(e.Message);
+                        }
+                        path = "";
+                        Console.WriteLine();
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+                    break;
+
+                    case 3:
+                    break;
+
+                    case 4:
+                    break;
+
+                    case 5:
+                    break;
+
+                    case 6:
+
+                        Console.Clear();
+                        Console.Write("Digite o nome da pasta que deseja criar com uma barra invertida antes: ");
+                        arqName = Console.ReadLine();
+                        Directory.CreateDirectory(path + @arqName);
+                        Console.WriteLine();
+                        
+                        try{
+                            var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                            Console.WriteLine("Todas as pastas desse diretório: ");
+                            foreach (var folder in folders)
+                            {
+                                    Console.WriteLine(folder);
+                            }
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Um erro ocorreu!");
+                            Console.WriteLine(e.Message);
+                        }
+                        Console.WriteLine();
+                        path = "";
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+
+                    break;
+
+                    case 7:
+                        try{
+                            var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                            Console.WriteLine("Todas as pastas desse diretório: ");
+                            foreach (var folder in folders)
+                            {
+                                    Console.WriteLine(folder);
+                            }
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Um erro ocorreu!");
+                            Console.WriteLine(e.Message);
+                        }
+                        Console.WriteLine();
+                        path = "";
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+                    break;
+
+                    case 8:
+                        try{
+                            var folders = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+                            Console.WriteLine("Todas os arquivos desse diretório: ");
+                            foreach (var folder in folders)
+                            {
+                                    Console.WriteLine(folder);
+                            }
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Um erro ocorreu!");
+                            Console.WriteLine(e.Message);
+                        }
+                        Console.WriteLine();
+                        path = "";
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+                    break;
+
+                }
+            } while (op != 9);
+            
         }
 
     }
