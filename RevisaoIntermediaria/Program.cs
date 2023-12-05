@@ -452,14 +452,15 @@ namespace RevisaoIntermediaria {
                     case 6:
 
                         Console.Clear();
-                        Console.Write("Digite o nome da pasta que deseja criar com uma barra invertida antes: ");
+                        Console.Write("Digite o nome da pasta que deseja criar com uma barra invertida antes (ex: '"+Path.DirectorySeparatorChar+"Nova pasta'): ");
                         arqName = Console.ReadLine();
                         Directory.CreateDirectory(path + @arqName);
                         Console.WriteLine();
                         
                         try{
                             var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
-                            Console.WriteLine("Todas as pastas desse diretório: ");
+                            Console.WriteLine("Todas as pastas desse diretório ("+Path.GetDirectoryName(path)+"): ");
+                            Console.WriteLine();
                             foreach (var folder in folders)
                             {
                                     Console.WriteLine(folder);
@@ -479,7 +480,8 @@ namespace RevisaoIntermediaria {
                     case 7:
                         try{
                             var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
-                            Console.WriteLine("Todas as pastas desse diretório: ");
+                            Console.WriteLine("Todas as pastas desse diretório ("+Path.GetDirectoryName(path)+"): ");
+                            Console.WriteLine();
                             foreach (var folder in folders)
                             {
                                     Console.WriteLine(folder);
@@ -498,7 +500,8 @@ namespace RevisaoIntermediaria {
                     case 8:
                         try{
                             var folders = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
-                            Console.WriteLine("Todas os arquivos desse diretório: ");
+                            Console.WriteLine("Todas os arquivos desse diretório ("+Path.GetDirectoryName(path)+"): ");
+                            Console.WriteLine();
                             foreach (var folder in folders)
                             {
                                     Console.WriteLine(folder);
