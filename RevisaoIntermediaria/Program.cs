@@ -367,13 +367,12 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("------------------------OPÇÕES------------------------");
                 Console.WriteLine("1 - Ler arquivo");
                 Console.WriteLine("2 - Acrescentar no arquivo");
-                Console.WriteLine("3 - Clonar arquivo");
-                Console.WriteLine("4 - Criar novo arquivo");
-                Console.WriteLine("5 - Deletar arquivo");
-                Console.WriteLine("6 - Criar uma pasta");
-                Console.WriteLine("7 - Listar todas as pastas dentro de outra pasta");
-                Console.WriteLine("8 - Listar todos os arquivos dentro de uma pasta");
-                Console.WriteLine("9 - Sair");
+                Console.WriteLine("3 - Criar novo arquivo");
+                Console.WriteLine("4 - Deletar arquivo");
+                Console.WriteLine("5 - Criar uma pasta");
+                Console.WriteLine("6 - Listar todas as pastas dentro de outra pasta");
+                Console.WriteLine("7 - Listar todos os arquivos dentro de uma pasta");
+                Console.WriteLine("8 - Sair");
                 Console.WriteLine("------------------------------------------------------");
                 Console.WriteLine();
                 Console.Write("Digite a opção escolhida: ");
@@ -392,8 +391,8 @@ namespace RevisaoIntermediaria {
                             Console.WriteLine("Conteúdo do arquivo: ");
                             using(StreamReader sr = File.OpenText(path)){
                                     while(!sr.EndOfStream){
-                                    string line = sr.ReadLine();
-                                    Console.WriteLine(line);
+                                        string line = sr.ReadLine();
+                                        Console.WriteLine(line);
                                 }
                             }
                         }
@@ -402,7 +401,6 @@ namespace RevisaoIntermediaria {
                             Console.WriteLine(e.Message);
                         }
                         Console.WriteLine();
-                        path = "";
                         Console.WriteLine("Clique 'enter' para continuar!");
                         Console.ReadLine();
                     break;
@@ -434,7 +432,6 @@ namespace RevisaoIntermediaria {
                             Console.WriteLine("Um erro ocorreu!");
                             Console.WriteLine(e.Message);
                         }
-                        path = "";
                         Console.WriteLine();
                         Console.WriteLine("Clique 'enter' para continuar!");
                         Console.ReadLine();
@@ -447,9 +444,6 @@ namespace RevisaoIntermediaria {
                     break;
 
                     case 5:
-                    break;
-
-                    case 6:
 
                         Console.Clear();
                         Console.Write("Digite o nome da pasta que deseja criar com uma barra invertida antes (ex: '"+Path.DirectorySeparatorChar+"Nova pasta'): ");
@@ -471,13 +465,12 @@ namespace RevisaoIntermediaria {
                             Console.WriteLine(e.Message);
                         }
                         Console.WriteLine();
-                        path = "";
                         Console.WriteLine("Clique 'enter' para continuar!");
                         Console.ReadLine();
 
                     break;
 
-                    case 7:
+                    case 6:
                         try{
                             var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
                             Console.WriteLine("Todas as pastas desse diretório ("+Path.GetDirectoryName(path)+"): ");
@@ -492,12 +485,11 @@ namespace RevisaoIntermediaria {
                             Console.WriteLine(e.Message);
                         }
                         Console.WriteLine();
-                        path = "";
                         Console.WriteLine("Clique 'enter' para continuar!");
                         Console.ReadLine();
                     break;
 
-                    case 8:
+                    case 7:
                         try{
                             var folders = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
                             Console.WriteLine("Todas os arquivos desse diretório ("+Path.GetDirectoryName(path)+"): ");
@@ -512,13 +504,12 @@ namespace RevisaoIntermediaria {
                             Console.WriteLine(e.Message);
                         }
                         Console.WriteLine();
-                        path = "";
                         Console.WriteLine("Clique 'enter' para continuar!");
                         Console.ReadLine();
                     break;
 
                 }
-            } while (op != 9);
+            } while (op != 8);
             
         }
 

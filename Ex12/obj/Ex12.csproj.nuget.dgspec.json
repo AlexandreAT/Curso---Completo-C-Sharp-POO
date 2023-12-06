@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Revisao\\Revisao.csproj": {}
+    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex12\\Ex12.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Revisao\\Revisao.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex12\\Ex12.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Revisao\\Revisao.csproj",
-        "projectName": "Revisao",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Revisao\\Revisao.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex12\\Ex12.csproj",
+        "projectName": "Ex12",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex12\\Ex12.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Revisao\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Cursos e derivados\\Udemy\\Curso - C# Completo POO\\Ex12\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
