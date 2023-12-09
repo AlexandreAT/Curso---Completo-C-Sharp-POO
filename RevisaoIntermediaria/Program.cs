@@ -3,6 +3,7 @@ using System.Globalization;
 using RevisaoIntermediaria.Entities;
 using RevisaoIntermediaria.Entities.Enums;
 using RevisaoIntermediaria.Entities.Exceptions;
+using RevisaoIntermediaria.Service;
 
 namespace RevisaoIntermediaria {
     class Program{
@@ -30,7 +31,9 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("5 - Trabalhando com arquivos");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("6 - Sair");
+                Console.WriteLine("6 - Interfaces");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("7 - Sair");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine();
                 Console.Write("Digite a opção escolhida: ");
@@ -52,9 +55,12 @@ namespace RevisaoIntermediaria {
                     case 5:
                         Arquivos();
                     break;
+                    case 6:
+                        Interfaces();
+                    break;
                 }
 
-            } while (resp != 6);
+            } while (resp != 7);
             Console.Clear();
         }
 
@@ -390,9 +396,9 @@ namespace RevisaoIntermediaria {
                         try{
                             Console.WriteLine("Conteúdo do arquivo: ");
                             using(StreamReader sr = File.OpenText(path)){
-                                    while(!sr.EndOfStream){
-                                        string line = sr.ReadLine();
-                                        Console.WriteLine(line);
+                                while(!sr.EndOfStream){
+                                    string line = sr.ReadLine();
+                                    Console.WriteLine(line);
                                 }
                             }
                         }
@@ -438,9 +444,31 @@ namespace RevisaoIntermediaria {
                     break;
 
                     case 3:
+
+                        Console.Clear();
+                        Console.Write("Digite o nome do novo arquivo com seu tipo no final (ex: 'Arquivo Novo.txt'): ");
+                        arqName = Console.ReadLine();
+                        path += arqName;
+                        File.Create(path);
+                        Console.WriteLine("Arquivo criado!");
+                        Console.WriteLine();
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+
                     break;
 
                     case 4:
+
+                        Console.Clear();
+                        Console.Write("Digite o nome do arquivo que sera deletado com seu tipo no final (ex: 'Arquivo Novo.txt'): ");
+                        arqName = Console.ReadLine();
+                        path += arqName;
+                        File.Delete(path);
+                        Console.WriteLine("Arquivo deletado!");
+                        Console.WriteLine();
+                        Console.WriteLine("Clique 'enter' para continuar!");
+                        Console.ReadLine();
+
                     break;
 
                     case 5:
@@ -511,6 +539,47 @@ namespace RevisaoIntermediaria {
                 }
             } while (op != 8);
             
+        }
+
+        static void Interfaces(){
+
+            string model;
+            DateTime start, finish;
+            double pricePerHour, pricePerDay;
+            Vehicle vehicle;
+            CarRental carRental;
+            RentalService rentalService;
+
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("Interfaces");
+            Console.WriteLine("-------------------------------------------------------");
+
+            Console.WriteLine("Insira os dados do aluguel: ");
+            Console.Write("Digite o modelo: ");
+            model = Console.ReadLine();
+            Console.Write("Digite o momento da coleta (dd/MM/yyyy hh:mm): ");
+            start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            Console.Write("Digite o momento da devolução (dd/MM/yyyy hh:mm): ");
+            finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            vehicle = new Vehicle(model);
+            carRental = new CarRental(start, finish, vehicle);
+            
+            Console.Write("Digite o preço por hora alugada: ");
+            pricePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Digite o preço por dia alugado: ");
+            pricePerDay = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+            rentalService.ProcessInvoice(carRental);
+
+            Console.WriteLine();
+            Console.WriteLine("FATURA");
+            Console.WriteLine(carRental.Invoice);
+            Console.WriteLine("");
+            Console.WriteLine("Clique enter para voltar ao menu");
+            Console.ReadLine();
+
         }
 
     }
