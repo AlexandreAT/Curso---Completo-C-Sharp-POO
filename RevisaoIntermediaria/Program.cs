@@ -33,7 +33,9 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("6 - Interfaces");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("7 - Sair");
+                Console.WriteLine("7 - Generics");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("8 - Sair");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine();
                 Console.Write("Digite a opção escolhida: ");
@@ -58,9 +60,12 @@ namespace RevisaoIntermediaria {
                     case 6:
                         Interfaces();
                     break;
+                    case 7:
+                        Generics();
+                    break;
                 }
 
-            } while (resp != 7);
+            } while (resp != 8);
             Console.Clear();
         }
 
@@ -538,7 +543,6 @@ namespace RevisaoIntermediaria {
 
                 }
             } while (op != 8);
-            
         }
 
         static void Interfaces(){
@@ -576,6 +580,35 @@ namespace RevisaoIntermediaria {
             Console.WriteLine();
             Console.WriteLine("FATURA");
             Console.WriteLine(carRental.Invoice);
+            Console.WriteLine("");
+            Console.WriteLine("Clique enter para voltar ao menu");
+            Console.ReadLine();
+
+        }
+
+        static void Generics(){
+
+            int n;
+            PrintService printService = new PrintService();
+
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("Generics");
+            Console.WriteLine("-------------------------------------------------------");
+
+            Console.Write("Digite quantos números inteiros serão adicionados ao conjunto: ");
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            for(int i = 1; i <= n; i++){
+                Console.Write($"Digite o valor da posição {i}: ");
+                printService.AddValue(int.Parse(Console.ReadLine()));
+            }
+
+            Console.WriteLine();
+            printService.Print();
+            Console.WriteLine("First: "+ printService.First());
             Console.WriteLine("");
             Console.WriteLine("Clique enter para voltar ao menu");
             Console.ReadLine();
