@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.InteropServices;
 using RevisaoIntermediaria.Entities;
 using RevisaoIntermediaria.Entities.Enums;
 using RevisaoIntermediaria.Entities.Exceptions;
@@ -35,7 +36,9 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("7 - Generics");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("8 - Sair");
+                Console.WriteLine("8 - GetHashCode, Equals e HashSet");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("9 - Sair");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine();
                 Console.Write("Digite a opção escolhida: ");
@@ -63,9 +66,12 @@ namespace RevisaoIntermediaria {
                     case 7:
                         Generics();
                     break;
+                    case 8:
+                        GetHashCode();
+                    break;
                 }
 
-            } while (resp != 8);
+            } while (resp != 9);
             Console.Clear();
         }
 
@@ -589,7 +595,10 @@ namespace RevisaoIntermediaria {
         static void Generics(){
 
             int n;
-            PrintService printService = new PrintService();
+            string name;
+            double value;
+            List<Product> products = new List<Product>();
+            CalculationService calculationService = new CalculationService();
 
             Console.Clear();
             Console.WriteLine("");
@@ -597,18 +606,63 @@ namespace RevisaoIntermediaria {
             Console.WriteLine("Generics");
             Console.WriteLine("-------------------------------------------------------");
 
-            Console.Write("Digite quantos números inteiros serão adicionados ao conjunto: ");
+            Console.Write("Digite quantos produtos serão adicionados na lista: ");
             n = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
             for(int i = 1; i <= n; i++){
-                Console.Write($"Digite o valor da posição {i}: ");
-                printService.AddValue(int.Parse(Console.ReadLine()));
+                Console.Write($"Digite o nome e preço do produto (separando por vírgula) da posição {i}: ");
+                string[] vect = Console.ReadLine().Split(',');
+                name = vect[0];
+                value = double.Parse(vect[1], CultureInfo.InvariantCulture);
+                products.Add(new Product(name, value));
             }
 
             Console.WriteLine();
-            printService.Print();
-            Console.WriteLine("First: "+ printService.First());
+            
+            Product max = calculationService.Max(products);
+            Console.WriteLine("Produto mais caro: " + max);
+            Console.WriteLine("");
+            Console.WriteLine("Clique enter para voltar ao menu");
+            Console.ReadLine();
+
+        }
+
+        static void GetHashCode(){
+            
+            string path = @"C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\RevisaoIntermediaria\In.txt";
+            string username;
+            DateTime isntante;
+            LogRecord logRecord;
+            HashSet<LogRecord> logRecords = new HashSet<LogRecord>();
+
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("GetHashCode, Equals e HashSet");
+            Console.WriteLine("-------------------------------------------------------");
+
+            Console.WriteLine("Lendo o arquivo que contem os registros de navegação de usuários");
+            
+            try{
+                using(StreamReader sr = new StreamReader(path)){
+                    
+                    while(!sr.EndOfStream){
+                        string[] line = sr.ReadLine().Split(" ");
+                        username = line[0];
+                        isntante = DateTime.Parse(line[1]);
+                        logRecord = new LogRecord(username, isntante);
+                        logRecords.Add(logRecord);
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("Total de usuários: "+ logRecords.Count);
+
+                }
+            }
+            catch(Exception e){
+                Console.WriteLine("Erro ao ler o arquivo!");
+                Console.WriteLine(e.Message);
+            }
             Console.WriteLine("");
             Console.WriteLine("Clique enter para voltar ao menu");
             Console.ReadLine();
