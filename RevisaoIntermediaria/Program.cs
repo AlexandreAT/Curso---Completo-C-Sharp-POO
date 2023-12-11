@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using System.Runtime.InteropServices;
+using System.Linq;
 using RevisaoIntermediaria.Entities;
 using RevisaoIntermediaria.Entities.Enums;
 using RevisaoIntermediaria.Entities.Exceptions;
@@ -38,7 +38,9 @@ namespace RevisaoIntermediaria {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("8 - GetHashCode, Equals e HashSet");
                 Console.WriteLine("-------------------------------------------------------");
-                Console.WriteLine("9 - Sair");
+                Console.WriteLine("9 - Trabalhando com LINQ, Expressão Lambda e Delegates");
+                Console.WriteLine("-------------------------------------------------------");
+                Console.WriteLine("10 - Sair");
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine();
                 Console.Write("Digite a opção escolhida: ");
@@ -69,9 +71,12 @@ namespace RevisaoIntermediaria {
                     case 8:
                         GetHashCode();
                     break;
+                    case 9:
+                        LINQ();
+                    break;
                 }
 
-            } while (resp != 9);
+            } while (resp != 10);
             Console.Clear();
         }
 
@@ -666,6 +671,119 @@ namespace RevisaoIntermediaria {
             Console.WriteLine("");
             Console.WriteLine("Clique enter para voltar ao menu");
             Console.ReadLine();
+
+        }
+
+        static void LINQ(){
+
+            int op;
+            string name;
+            double price;
+            List<Product> products = new List<Product>();
+            
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("Trabalhando com LINQ, Expressão Lambda e Delegates");
+            Console.WriteLine("-------------------------------------------------------");
+
+            do
+            {
+                string path = @"C:\Users\alexa\Desktop\Cursos e derivados\Udemy\Curso - C# Completo POO\RevisaoIntermediaria\";
+                Console.Clear();
+                Console.WriteLine("1 - Criar um arquivo e adicionar os produtos!");
+                Console.WriteLine("2 - Abrir um arquivo já existentente e realizar as operações!");
+                Console.WriteLine("3 - Sair!");
+                Console.Write("Escolha uma opção: ");
+                op = int.Parse(Console.ReadLine());
+
+                switch (op){
+
+                    case 1:
+
+                        Console.Clear();
+                        Console.Write("Digite o nome do novo arquivo com a extensão 'csv' (ex: 'Novo Arquivo.csv'): ");
+                        string newFileName = Console.ReadLine();
+                        path += newFileName;
+                        try{
+                            using(StreamWriter sw = new StreamWriter(path)){
+                                
+                                int n = 0;
+                                Console.WriteLine();
+                                Console.Write("Digite quantos produtos serão adicionados ao arquivo: ");
+                                n = int.Parse(Console.ReadLine());
+                                for(int i = 1; i <= n; i++){
+                                    Console.Write($"Digite o nome e o preço do novo produto {i}, separando por vírgula (ex: TV, 100.00): ");
+                                    string line = Console.ReadLine();
+                                    sw.WriteLine(line);
+                                }
+
+                            }
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Ocorreu um erro ao criar o arquivo!");
+                            Console.WriteLine(e.Message);
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("Arquivo criado com sucesso!");
+                        Console.WriteLine("Clique enter para voltar ao menu");
+                        Console.ReadLine();
+
+                    break;
+
+                    case 2:
+
+                        Console.Clear();
+                        try{
+                            var folder = Directory.EnumerateFiles(path, "*.csv", SearchOption.AllDirectories);
+                            Console.WriteLine("Arquivos 'csv' disponíveis nessa pasta:");
+                            Console.WriteLine();
+                            foreach(var file in folder){
+                                Console.WriteLine(file);
+                            }
+
+                            Console.WriteLine();
+                            Console.Write("Digite o nome do arquivo que deseja abrir com o seu tipo 'csv' (ex: 'Novo Arquivo.csv'): ");
+                            string fileName = Console.ReadLine();
+                            path += fileName;
+
+                            using(StreamReader sr = new StreamReader(path)){
+                                while(!sr.EndOfStream){
+                                    string[] vect = sr.ReadLine().Split(',');
+                                    name = vect[0];
+                                    price = double.Parse(vect[1], CultureInfo.InvariantCulture);
+                                    products.Add(new Product(name, price));
+                                }
+                            }
+
+                            Console.WriteLine();
+                            // MEU JEITO: var avg = products.Average(p => p.Value);
+                            var avg = products.Select(p => p.Value).DefaultIfEmpty(0.0).Average(); // Jeito do professor
+                            Console.WriteLine("Média dos produtos deste arquivo: "+ avg.ToString("F2", CultureInfo.InvariantCulture));
+                            
+                            Console.WriteLine();
+                            var producsNames = products.Where(p => p.Value < avg).OrderByDescending(p => p.Name).Select(p => p.Name);
+                            Console.WriteLine("Produtos com o valor abaixo da média em ordem decrescente: ");
+                            foreach (var names in producsNames)
+                            {
+                                Console.WriteLine(names);
+                            }
+
+                        }
+                        catch(IOException e){
+                            Console.WriteLine("Ocorreu um erro!");
+                            Console.WriteLine(e.Message);
+                        }
+
+                        Console.WriteLine();
+                        Console.WriteLine("Clique enter para voltar ao menu");
+                        Console.ReadLine();
+
+                    break;
+
+                }
+            } while (op != 3);
+                
 
         }
 
